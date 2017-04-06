@@ -1,6 +1,8 @@
 # Purpose
 These scripts allow you to display your heartbeat live on your avatar, turning its skin red with every beat. 
 
+![alt tag](https://github.com/mariusrubo/Unity-DisplayHeartbeat/blob/master/characterChangeColor.png)
+
 # Installation
 The installation of this functionality consists of two steps: 
 * Enabling your character to change its color 
@@ -19,6 +21,8 @@ The installation of this functionality consists of two steps:
 * The below image shows the approach taken for this script. ECG data can usually be recorded at a high temporal precision of 500Hz or more (a), making the R curve easy to find visually, at least in artefact-free recordings like the one displayed here. Plotting the change in voltage rather than the absolute voltage (b) can even increase the signal(R-curve)-to-noise(all other components)-ratio. Recording and evaluating ECG data at Unity's native frequency of 60Hz makes the R curve  less obvious (c), although looking at differences rather than absolute values may again facilitate detecting (d).
 * "ChangeColorInterface.cs" parses the 60Hz-ECG data provided in the example, and only looks at the voltage changes as in (d). It first collects data for 5 seconds, and then determines to 95th percentile of these datapoints drawn as a line in (d). Note that choosing a lower percentile will reduce the chance of missing an R curve, but increase the risk of false positives, and vice verca. From that point on, any new data point located beyond this threshold will trigger a sudden change of the character's skin to red, while datapoints smaller than the threshold will allow the skin to slowly fade back to its original color. Since only fast changes in voltage are processed, this approach is robust against slow changes of the ECG baseline which may occur in the course of an experiment. 
 * Depending on your ECG measurement system's API, you will be able to use other procedures to detect R curves. This is just a basic example using raw data provided ata low frequency of 60 Hz. 
+
+![alt tag](https://github.com/mariusrubo/Unity-DisplayHeartbeat/blob/master/detectRcurve.png)
 
 # License
 These scripts run under the GPLv3 license.
