@@ -12,7 +12,7 @@ The installation of this functionality consists of two steps:
 ## Link color change to ECG data
 * Attach "ChangeColorInterface.cs" to any object in the scene. This file will call "ChangeColor.cs", but also provides code to handle ECG data and change the color accordingly.
 * Place the example file "ecg_data.csv" anywhere on your computer and set the path in "ChangeColorInterface.cs" accordingly. Unity will simulate livestreaming the ECG data from that file.
-* Press play and watch.
+* Press play. Character will start displaying the heartbeat after 5 seconds.
 
 # Background: Detecting R curves
 * Robustly detecting R curves (the "beat") in ECG data is not trivial, and when small changes in frequency are important, ECG data is typically analyzed offline and only semi-automatically. To display ECG data live of course requires online processing. 
