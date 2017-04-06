@@ -3,8 +3,8 @@ These scripts allow you to display your heartbeat live on your avatar, turning i
 
 # Installation
 The installation of this functionality consists of two steps: 
-* 1) Enabling your character to change its color 
-* 2) Link color change to ECG data
+* Enabling your character to change its color 
+* Link color change to ECG data
 ## Enable your character to change its color
 * If you merely wish your entire character to turn red, including its hair and clothes, you can simply use this line of code (with 'character' being the GameObject of your character and 'color' a float between 0 and 1): character.GetComponent<Renderer>().material.color = Color.Lerp(Color.white, Color.red, color*0.1f); 
 * Changing the color of only some parts of your mesh, like the skin or perhaps only the hands, is more complex. First find the skin texture of your character in your project folder (it looks like the rolled out wrapping of a chocolate Santa Claus), create a folder ".../Assets/Ressources" and copy it there. Copy this image again and colorize it as you like. Find both these images inside the Unity project tab. In the inspector, set "Read/Write Enable" to true and change Format to "RGBA 32 Bit". 
