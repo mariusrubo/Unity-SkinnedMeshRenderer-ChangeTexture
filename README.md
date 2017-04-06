@@ -1,5 +1,5 @@
 # Purpose
-These scripts allow you to display your heartbeat live on your avatar, turning its skin red with every beat. 
+These scripts allow you to display your heartbeat live on your avatar, changing its skin's texture with every beat. 
 
 ![alt tag](https://github.com/mariusrubo/Unity-DisplayHeartbeat/blob/master/characterChangeColor.png)
 
